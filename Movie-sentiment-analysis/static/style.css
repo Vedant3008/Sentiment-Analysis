@@ -1,0 +1,108 @@
+/* Global Styles */
+
+/* Set default font and background color */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+  }
+  
+  /* Dark mode */
+  body.dark-mode {
+    background-color: #333;
+    color: #fafafa;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Heading styles */
+  h1,
+  h2,
+  h3 {
+    margin-top: 0;
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  /* Button styles */
+  .submitbtn {
+    display: inline-block;
+    background-color: #333;
+    color: #fafafa;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Input and Textarea styles */
+  .txtarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark mode for input and textarea */
+  .txtarea {
+    background-color: #333;
+    color: #fafafa;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Results page styles */
+  
+  /* Chart container styles */
+  .chart {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  /* Pie chart styles */
+  #myChart {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Positive and negative summary styles */
+  .positive-summary,
+  .negative-summary {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .positive-summary {
+    color: green;
+  }
+  
+  .negative-summary {
+    color: darkred;
+  }
+  
+.chart {
+    margin-top: 20px;
+    text-align: center;
+}

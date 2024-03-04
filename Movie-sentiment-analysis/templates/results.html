@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Reviews Sentiment Analysis Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Movie Reviews Sentiment Analysis Results</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="summary">
+                <h2>{{ movie_name }}</h2>
+                <p>Positive reviews summary: {{ positive_summary }}</p>
+                <p>Negative reviews summary: {{ negative_summary }}</p>
+                <p class="positive">Positive reviews: {{ percent_positive_reviews }}%</p>
+                <p class="negative">Negative reviews: {{ percent_negative_reviews }}%</p>
+            </div>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Positive Reviews', 'Negative Reviews'],
+                datasets: [{
+                    data: [{{ percent_positive_reviews }}, {{ percent_negative_reviews }}],
+                    backgroundColor: [
+                        'rgba(0, 128, 0, 0.7)',
+                        'rgba(255, 0, 0, 0.7)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Sentiment Analysis of Reviews',
+                    fontSize: 24
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontColor: 'black',
+                        fontSize: 14,
+                        boxWidth: 20
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
